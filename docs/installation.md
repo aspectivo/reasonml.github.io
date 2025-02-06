@@ -54,7 +54,7 @@ For a comprehensive guide on how to create an opam switch, refer to the followin
 opam install reason
 ```
 
-Once the instalation of the [`reason`](https://opam.ocaml.org/packages/reason) package is done you will have available the following tools `refmt` and `rtop` and there's no configuration change to enable the build system (dune) to build your code.
+Once the installation of the [`reason`](https://opam.ocaml.org/packages/reason) package is done you will have available the following tools `refmt` and `rtop` and there's no configuration change to enable the build system (dune) to build your code.
 
 Make sure you have installed the latest version of `refmt` and `rtop` by running the following command:
 
