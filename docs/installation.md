@@ -5,6 +5,7 @@ title: Installation
 This page is a detailed explanation on how to install Reason with [opam](https://opam.ocaml.org/), both manually and using a template. There are other options available, such as [esy](https://esy.sh), but we recommend using opam for the best experience. Check the [esy installation page](installation-esy.md) if you want to use esy instead.
 
 ### System requirements
+
 - macOS and Linux are supported natively
 - Windows is supported via WSL (https://ocaml.org/docs/ocaml-on-windows)
 
@@ -53,7 +54,7 @@ For a comprehensive guide on how to create an opam switch, refer to the followin
 opam install reason
 ```
 
-Once the instalation of the [`reason`](https://opam.ocaml.org/packages/reason) package is done you will have available the following tools `refmt` and `rtop` and there's no configuration change to enable the build system (dune) to build your code.
+Once the installation of the [`reason`](https://opam.ocaml.org/packages/reason) package is done you will have available the following tools `refmt` and `rtop` and there's no configuration change to enable the build system (dune) to build your code.
 
 Make sure you have installed the latest version of `refmt` and `rtop` by running the following command:
 
@@ -74,24 +75,37 @@ opam install dune
 To wrap up the installation process, let's create a simple hello world project. With the basic setup done:
 
 Create a file `hello.re` with the following content:
+
 ```
 print_endline("Hello world!");
 ```
 
+Create a file `dune-project` with the following content (check [dune.build](https://dune.build/) for latest version):
+
+```
+(lang dune 3.6)
+```
+
+Create an empty file `hello.opam`
+
 Create a file `dune` with the following content:
+
 ```
 (executable
  (name hello)
  (public_name hello))
 ```
+
 > Note: dune uniformly uses the .exe extension to build native executables, even on Unix where programs don’t usually have a .exe extension.
 
 The `executable` stanza is used to define executables and the `name` field is used to specify the name of the executable (Can run with `dune exec src/hello.exe`). The `public_name` field is used to specify the name of the executable when it is installed and allows you to run the executable with `hello` directly: `dune exec hello`.
 
 Run the project (this will compile the project and run the executable):
+
 ```
 dune exec hello
 ```
+
 If you want to build only:
 
 ```

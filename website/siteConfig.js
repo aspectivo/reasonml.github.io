@@ -288,6 +288,11 @@ const users = [
     name: "Aspectivo",
     image: "img/logos/aspectivo.svg",
     infoLink: "https://aspectivo.ai",
+  },
+  {
+    name: "DevITJobs",
+    image: "img/logos/devitjobs-uk.svg",
+    infoLink: "https://devitjobs.uk",
   }
 ];
 
